@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Candlekit Live Chart</title>
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <header class="toolbar">
+      <select id="symbol" aria-label="Coin"></select>
+      <div id="intervals" class="intervals"></div>
+      <div class="price">
+        <strong id="last-price">-</strong>
+        <span id="price-change"></span>
+      </div>
+      <div class="legend">
+        <span class="sma">SMA 20</span>
+        <span class="ema">EMA 50</span>
+        <span class="rsi">RSI 14: <span id="rsi-value">-</span></span>
+      </div>
+      <div id="status" class="status" role="status">Loading...</div>
+    </header>
+
+    <main id="chart" class="chart"></main>
+
+    <footer class="footer">
+      Prices from Binance. Candles and indicators calculated by candlekit. Not financial advice.
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+{
+  "name": "candlekit-chart-app",
+  "private": true,
+  "author": "Floyd J. Reagan <floydreagan36@proton.me>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/candlekit/chart-app.git",
+    "directory": "chart-app"
+  },
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "candlekit": "file:..",
+    "lightweight-charts": "^5.2.1"
+  },
+  "devDependencies": {
+    "vite": "^8.3.6"
+  }
+}

@@ -1,0 +1,130 @@
+:root {
+  --background: #0f141c;
+  --panel: #171e29;
+  --border: #2a3342;
+  --text: #e4e8ee;
+  --muted: #8d98a8;
+  --accent: #3b82f6;
+  --up: #26a69a;
+  --down: #ef5350;
+  --sma: #f5b83d;
+  --ema: #4da3ff;
+  --rsi: #b98cff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  background: var(--background);
+  color: var(--text);
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  font-size: 14px;
+}
+
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 20px;
+  padding: 10px 16px;
+  background: var(--panel);
+  border-bottom: 1px solid var(--border);
+}
+
+select,
+button {
+  background: var(--background);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font: inherit;
+  cursor: pointer;
+}
+
+select {
+  padding: 6px 8px;
+  font-weight: 600;
+}
+
+.intervals {
+  display: flex;
+  gap: 4px;
+}
+
+button {
+  padding: 6px 10px;
+}
+
+button.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+.price strong {
+  font-size: 18px;
+  font-variant-numeric: tabular-nums;
+}
+
+.price span {
+  margin-left: 6px;
+  font-variant-numeric: tabular-nums;
+}
+
+.up {
+  color: var(--up);
+}
+
+.down {
+  color: var(--down);
+}
+
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  color: var(--muted);
+}
+
+.legend .sma {
+  color: var(--sma);
+}
+
+.legend .ema {
+  color: var(--ema);
+}
+
+.legend .rsi {
+  color: var(--rsi);
+}
+
+.status {
+  margin-left: auto;
+  color: var(--muted);
+}
+
+.status.error {
+  color: var(--down);
+}
+
+.chart {
+  flex: 1;
+  min-height: 0;
+}
+
+.footer {
+  padding: 6px 16px;
+  color: var(--muted);
+  font-size: 12px;
+  border-top: 1px solid var(--border);
+}
